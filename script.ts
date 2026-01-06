@@ -1,34 +1,44 @@
+//explicit types
+let character: string;
+let age: number;
+let isLoggedIn: boolean;
 
-//Arrays
-let names = ['luigi', 'mario', 'yoshi'];
+//age = 'luigi'; //error
+age = 30;
 
-names.push('toad');
-// names.push(3); // error
-// names[1] = 25; // error
-// names = 'hello'; // error
 
-let numbers = [10, 20, 30];
-numbers.push(40);
-// numbers.push('shaun'); // error
-// numbers[1] = 'luigi'; // error
-// numbers = 'hello'; // error
+//isLoggedIn = 25; //error
+isLoggedIn = true;
 
-let mixed = ['ken', 4, 'chun-li', 8, 9];
-mixed.push('ryu');
-mixed.push(10); 
-mixed[0] = 3;
+//arrays
+let ninjas: string[] = [];
 
-// objects
-let ninja = {
-    name: 'yoshi',
-    belt: 'black',
-    age: 30
+ninjas.push('shaun');
+//ninjas.push(3); //error
+
+let mixed: (string | number | boolean)[] = [];
+mixed.push('hello');
+mixed.push(20);
+mixed.push(false);
+console.log(mixed);
+
+let uid: string| number;
+uid = '123';
+uid = 123;
+//uid = false; //error
+
+//objects
+let ninjaOne: object;
+ninjaOne = { name: 'yoshi', age: 30 };
+
+let ninjaTwo: {
+    name: string,
+    age: number,
+    beltColor: string
 };
 
-ninja.age = 40;
-ninja.name = 'ken';
-// ninja.age = '30'; // error
-// ninja.skills = ['fighting', 'sneaking']; // error
-// ninja = {}; // error
 
+ninjaTwo = { name: 'mario', age: 20, beltColor: 'black' };
+//ninjaTwo = { name: 'luigi', age: 25 }; //error
 
+//any type
